@@ -1,0 +1,52 @@
+<div class="container mt-2">
+  <div class="card shadow" style="max-width: 400px; margin: auto;">
+    <div class="card-header bg-success text-white">
+      <h3 class="text-center mb-0">Create Users</h3></div>
+      <p class="text-muted text-center" style="font-weight: bold; ">Create an FMS account to make quick and easy bookings.</p>
+    
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" class="needs-validation" novalidate>
+        <!-- User Name Input -->
+        <div class="form-group">
+          <label for="userName">User Name</label>
+          <input type="text" class="form-control" id="userName" required [(ngModel)]="user.userName" name="userName">
+        </div>
+  
+        <!-- User Password Input -->
+        <div class="form-group">
+          <label for="userPassword">User Password</label>
+          <input type="password" class="form-control" id="userPassword" required [(ngModel)]="user.userPassword" name="userPassword">
+        </div>
+  
+        <!-- User Phone Input -->
+        <div class="form-group">
+          <label for="userPhone">User Phone</label>
+          <input type="tel" class="form-control" id="userPhone" required [(ngModel)]="user.userPhone" name="userPhone">
+        </div>
+  
+        <!-- User Email Input -->
+        <div class="form-group">
+          <label for="userEmail">User Email</label>
+          <input type="email" class="form-control" id="userEmail" required [(ngModel)]="user.userEmail" name="userEmail">
+        </div>
+  
+        <!-- User Role Input -->
+        <div class="form-group">
+          <label for="userRole">User Role</label>
+          <input type="text" class="form-control" id="userRole" required [(ngModel)]="user.userRole" name="userRole">
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-success btn-block">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Success Alert Section -->
+  <div [hidden]="!submitted" class="mt-2">
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Success!</h4>
+      <p>You submitted the form successfully.</p>
+    </div>
+  </div>
+</div>

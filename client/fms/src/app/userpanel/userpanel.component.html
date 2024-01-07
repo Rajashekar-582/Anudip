@@ -1,0 +1,132 @@
+<style>
+    .user-panel {
+      display: flex;
+      flex-direction: column;
+      background-image: url('/assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+      height: 100vh;
+    }
+  
+    .navbar {
+      background-color: #333;
+      padding: 10px;
+      color: white;
+    }
+  
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .navbar li {
+      margin: 0 10px; /* Add margin to create space between navbar elements */
+    }
+  
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+  
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+  
+    .welcome-message {
+      font-size: 24px;
+      color: rgb(241, 3, 3);
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .ul{
+      color: white;
+      font-weight: bold;
+    }
+    .scrolling-text {
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      background-color: #e3f300;
+      background-size:contain;
+      background-repeat: round;
+      color: #f50505;
+      
+    }
+  
+    .feature-highlight {
+      font-size: 18px;
+      color: rgb(239, 243, 3);
+      
+      margin-bottom: 10px;
+    }
+  
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+  
+    .cta-button:hover {
+      background-color: #45a049;
+    }
+    @keyframes blinkAnimation {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  
+    .blink-text {
+      
+      font-size: 24px;
+      color: rgb(241, 3, 3);
+      font-weight: bold;
+      margin-bottom: 20px;
+       /* Set the color for the blinking text */
+      animation: blinkAnimation 3s infinite; /* Use the blink animation */
+    }
+  </style>
+  
+  <div class="user-panel">
+    <div class="navbar">
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/aboutus">About Us</a></li>
+        <li><a routerLink="/contactus">Contact Us</a></li>
+        <li><a routerLink="/booking/addnewbooking">Book a Flight</a></li>
+      </ul>
+    </div>
+    <div class="scrolling-text">
+      <marquee behavior="scroll" direction="left">
+        <div >Special Offer: Save 20% on your first booking - Limited Time Only!</div>
+      </marquee>
+    </div>
+    <div class="content">
+      <div class="blink-text">Welcome to our Flight Booking Platform!</div>
+      <p class="feature-highlight">
+        Explore the world with our seamless flight booking experience. We offer:
+      </p>
+      <ul class="ul">
+        <li>Easy and fast booking process</li>
+        <li>Competitive prices on a wide range of flights</li>
+        <li>24/7 customer support for your convenience</li>
+      </ul>
+      <p class="feature-highlight">
+        Ready to embark on your next adventure? Book your flight now!
+      </p>
+      <a href="/booking/addnewbooking" class="cta-button">Book Now</a>
+  
+      
+      
+    </div>
+  </div>
+  

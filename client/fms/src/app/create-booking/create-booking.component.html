@@ -1,0 +1,43 @@
+<div class="booking-add">
+  <h3 class="text-center">Create Booking</h3>
+  <div [hidden]="submitted" class="container mt-4">
+      <form (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3 bg-light p-4 border rounded">
+          <!-- Travel Date -->
+          <div class="form-group">
+              <label for="bookingDate">Travel Date</label>
+              <input type="date" class="form-control" id="bookingDate" required [(ngModel)]="booking.bookingDate" name="bookingDate">
+          </div>
+
+          <!-- Source -->
+          <div class="form-group">
+              <label for="source">Source</label>
+              <input type="text" class="form-control" id="source" required [(ngModel)]="booking.source" name="source">
+          </div>
+
+          <!-- Destination -->
+          <div class="form-group">
+              <label for="destination">Destination</label>
+              <input type="text" class="form-control" id="destination" required [(ngModel)]="booking.destination" name="destination">
+          </div>
+
+          <!-- No of Passengers -->
+          <div class="form-group">
+              <label for="noOfPassengers">No of Passengers</label>
+              <input type="number" class="form-control" id="noOfPassengers" required [(ngModel)]="booking.noOfPassengers" name="noOfPassengers">
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center">
+              <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+      </form>
+  </div>
+
+  <!-- Success Message -->
+  <div [hidden]="!submitted" class="text-center mt-4">
+      <div class="alert alert-success">
+          <h4 class="alert-heading">You submitted successfully!</h4>
+          <!-- You can add more content or actions here -->
+      </div>
+  </div>
+</div>

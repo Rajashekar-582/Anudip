@@ -1,0 +1,97 @@
+<style>
+    /* Add your custom styles here */
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+  
+    .form-container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 400px;
+      margin: 50px auto;
+    }
+  
+    .form-group {
+      margin-bottom: 20px;
+    }
+  
+    label {
+      font-weight: bold;
+      color: #495057;
+    }
+  
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  
+    .btn-success {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    .btn-success:hover {
+      background-color: #218838;
+    }
+  
+    .success-message {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+      color: #28a745;
+    }
+  
+    .error-message {
+      display: none;
+      color: #dc3545;
+      margin-top: 5px;
+    }
+  
+    .is-invalid {
+      border-color: #dc3545 !important;
+    }
+  </style>
+  
+  <h3 style="text-align: center;">Add an Airport</h3>
+  
+  <div [hidden]="submitted" class="form-container">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="airportCode">Airport Code</label>
+        <input type="text" placeholder="Airport Code" required pattern="^[A-Z]{1,5}$" [(ngModel)]="airport.airportCode" name="airportCode"
+          class="form-control" #airportCode="ngModel" [class.is-invalid]="airportCode.invalid && airportCode.touched">
+        <small class="error-message" [class.d-none]="airportCode.valid || airportCode.untouched">Code should contain max 5 letters</small>
+      </div>
+  
+      <div class="form-group">
+        <label for="airportName">Airport Name</label>
+        <input type="text" placeholder="Airport Name" required [(ngModel)]="airport.airportName" name="airportName" class="form-control"
+          #airportName="ngModel" [class.is-invalid]="airportName.invalid && airportName.touched">
+        <small class="error-message" [class.d-none]="airportName.valid || airportName.untouched">Name is required</small>
+      </div>
+  
+      <div class="form-group">
+        <label for="airportLocation">Airport Location</label>
+        <input type="text" placeholder="Airport Location" required [(ngModel)]="airport.airportLocation" name="airportLocation" class="form-control"
+          #airportLocation="ngModel" [class.is-invalid]="airportLocation.invalid && airportLocation.touched">
+        <small class="error-message" [class.d-none]="airportLocation.valid || airportLocation.untouched">Location is required</small>
+      </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  
+  <div [hidden]="!submitted" class="success-message">
+    <h4>You submitted successfully!</h4>
+  </div>
+  

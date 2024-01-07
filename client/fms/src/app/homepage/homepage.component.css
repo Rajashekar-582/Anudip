@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+}
+
+.a {
+    background-repeat: no-repeat;
+    background-size: inherit;
+    height: 400px; /* Set the desired height */
+    width: 60%; /* Each element takes 50% of the container width */
+}
+
+.a {
+    background-image: url('/assets/12.gif');
+   
+}
+.b
+{
+    background-image: url('/assets/13.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+.scrolling-text {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    background-color: #e3f300;
+    background-size:contain;
+    background-repeat: round;
+    color: #f50505;
+    
+  }
+  .intro-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 200%;
+    border-radius: 8px;
+}
+
+h1 {
+    color: #3498db;
+}
+
+p {
+    color: #555;
+}

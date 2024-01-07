@@ -1,0 +1,50 @@
+<div class="container mt-5">
+    <h3 class="text-center mb-4">Add Flight</h3>
+  
+    <div [hidden]="submitted" class="card mx-auto" style="max-width: 400px;">
+      <form (ngSubmit)="onSubmit()" class="card-body">
+  
+        <div class="form-group">
+          <label for="carrierName">Carrier Name</label>
+          <input type="text" placeholder="Enter Carrier Name" #carrierName="ngModel"
+            [class.is-invalid]="carrierName.invalid && carrierName.touched"
+            class="form-control" id="carrierName" required
+            [(ngModel)]="flight.carrierName" name="carrierName">
+          <small class="text-danger" [class.d-none]="carrierName.valid || carrierName.untouched">
+            Carrier name is required
+          </small>
+        </div>
+  
+        <div class="form-group">
+          <label for="flightModel">Flight Model</label>
+          <input type="text" placeholder="Enter Flight Model" #flightModel="ngModel"
+            [class.is-invalid]="flightModel.invalid && flightModel.touched"
+            class="form-control" id="flightModel" required
+            [(ngModel)]="flight.flightModel" name="flightModel">
+          <small class="text-danger" [class.d-none]="flightModel.valid || flightModel.untouched">
+            Flight model is required
+          </small>
+        </div>
+  
+        <div class="form-group">
+          <label for="seatCapacity">Seat Capacity</label>
+          <input type="text" placeholder="Enter Seat Capacity" #seatCapacity="ngModel"
+            [class.is-invalid]="seatCapacity.invalid && seatCapacity.touched"
+            class="form-control" id="seatCapacity" required
+            [(ngModel)]="flight.seatCapacity" name="seatCapacity">
+          <small class="text-danger" [class.d-none]="seatCapacity.valid || seatCapacity.untouched">
+            Seat capacity is required
+          </small>
+        </div>
+  
+        <button type="submit" class="btn btn-block btn-success">Submit</button>
+      </form>
+    </div>
+  
+    <div [hidden]="!submitted" class="text-center mt-4">
+      <h4>You submitted successfully!</h4>
+      <!-- Add a button for additional actions if needed -->
+      <!-- <button class="btn btn-primary" (click)="newFlight()">Add Another Flight</button> -->
+    </div>
+  </div>
+  

@@ -1,0 +1,48 @@
+<div class="admin-panel">
+    <div class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            
+            
+            <img src="https://cdn-icons-png.flaticon.com/512/560/560199.png" height="200px" width="150px" alt="Admin Panel Logo" class="logo-img" align="center"><br>
+            Admin Panel
+        </a>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:4200/flight">
+                    <i class="fas fa-plane"></i> Flight Lists
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:4200/airport">
+                    <i class="fas fa-map-marker-alt"></i> Airport Lists
+                </a>
+            </li>
+        </ul>
+        <div class="navbar-text">
+            <p>Welcome, Admin!</p>
+        </div>
+    </div>
+    
+    <div class="content mt-4">
+        <div class="jumbotron text-center animated fadeIn">
+            <h1 class="display-4">Welcome to the Admin Panel</h1>
+            <p class="lead">Manage and oversee flight and airport information with ease.</p>
+            <hr class="my-4">
+            <p>Explore the navigation links to access different lists.</p>
+            <a href="http://localhost:4200/airport/addnewairport" class="btn btn-primary">Add Airports</a>
+            
+            <!-- Add space between buttons -->
+            <div style="margin-top: 10px;"></div>
+            
+            <!-- Add another button -->
+            <a href="http://localhost:4200/flight/addnewflight" class="btn btn-secondary">Add Flights</a>
+       
+        <div style="margin-top: 10px;"></div>
+            
+            <!-- Add another button -->
+            <a href="http://localhost:4200/users" class="btn btn-secondary">View Users</a>
+        </div>
+        
+        <router-outlet></router-outlet>
+    </div>
+</div>

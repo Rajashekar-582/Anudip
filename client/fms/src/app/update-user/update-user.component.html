@@ -1,0 +1,31 @@
+<h3>Update User</h3>
+<div  >
+  <form (ngSubmit)="onSubmit()">
+    
+     
+
+    <div class="form-group">
+      <label >UserName</label>
+      <input type="text" class="form-control" id="userName" required [(ngModel)]="user.userName" name="userName">
+    </div>
+
+    <div class="form-group">
+      <label >UserPassword</label>
+      <input type="password" class="form-control" id="userPassword" required [(ngModel)]="user.userPassword" name="userPassword">
+    </div>
+
+    <div class="form-group">
+        <label >UserPhone</label>
+        <input type="tel" class="form-control" id="userPhone" required [(ngModel)]="user.userPhone" name="userPhone">
+      </div>
+
+      <div class="form-group">
+        <label >UserEmail</label>
+        <input type="email" class="form-control" id="UserEmail" required [(ngModel)]="user.userEmail" name="userEmail">
+      </div>
+  
+  
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
