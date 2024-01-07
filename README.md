@@ -2,6 +2,10 @@
 # Output
 
 
+https://github.com/Rajashekar-582/Anudip/assets/104785884/08f9b049-e5aa-4652-8d3f-396cc73d446b
+
+
+
 # Flight Management System
 
 The Flight Management System is a web application developed using Angular for the frontend and Spring Boot for the backend. This system allows users to manage flights, airlines, airports, and bookings.
