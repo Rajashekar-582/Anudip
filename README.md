@@ -127,9 +127,7 @@ Contributions are welcome! If you want to contribute to this project, please fol
 
 1. Fork this repository.
 2. Create a new branch: `git checkout -b my-new-feature`.
-3. Make
-
- your changes and commit them: `git commit -am 'Add some feature'`.
+3. Makeyour changes and commit them: `git commit -am 'Add some feature'`.
 4. Push to the branch: `git push origin my-new-feature`.
 5. Submit a pull request.
 
